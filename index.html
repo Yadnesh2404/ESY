@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IoT Practical Code Index</title>
+<style>
+:root{color-scheme:dark;--bg:#0b1020;--panel:#151e33;--line:#2d3b59;--txt:#edf2ff;--muted:#aab6d0;--accent:#a8b4ff;--green:#a6f0ca;--gold:#ffe0a3}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 10% 0%,#26305a 0,transparent 35%),var(--bg);color:var(--txt);font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+.wrap{max-width:1120px;width:calc(100% - 32px);margin:auto;padding:40px 0 55px}.eyebrow{color:var(--accent);text-transform:uppercase;letter-spacing:.14em;font-size:.75rem;font-weight:800}h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.08;letter-spacing:-.04em;margin:10px 0}header p{color:var(--muted);max-width:760px}.toolbar{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:24px 0 18px}.search{flex:1;min-width:220px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:13px;color:var(--txt);font:inherit}.hint{font-size:.85rem;color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px}
+.card{background:linear-gradient(150deg,#19243c,#11192b);border:1px solid var(--line);border-radius:18px;padding:20px;display:flex;flex-direction:column;min-height:225px;cursor:pointer;transition:.15s}.card:hover{transform:translateY(-3px);border-color:#6879ac}.card:focus-visible{outline:3px solid var(--accent)}.top{display:flex;justify-content:space-between;gap:10px}.num{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:#29345b;color:var(--accent);font-weight:850}.status{font-size:.72rem;font-weight:750;border-radius:30px;padding:5px 9px;color:var(--green);background:#19352f;height:max-content}.warn{color:var(--gold);background:#382f21}.mutedstatus{color:var(--muted);background:#252d3d}h2{font-size:1.12rem;line-height:1.3;margin:16px 0 7px}.desc{font-size:.91rem;color:var(--muted);margin:0 0 14px}.tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:auto;padding-bottom:17px}.tag{font-size:.75rem;padding:4px 8px;border:1px solid #354463;border-radius:7px;color:#d4dcf3}.actions{display:flex;gap:8px;flex-wrap:wrap}button{border:0;border-radius:10px;padding:10px 12px;font:inherit;font-size:.85rem;font-weight:750;cursor:pointer}.primary{background:var(--accent);color:#10162a}.secondary{background:#293650;border:1px solid #3b4b6d;color:var(--txt)}button:disabled{opacity:.6;cursor:not-allowed}.note{margin-top:22px;padding:16px 18px;background:#131b2d;border:1px solid var(--line);border-radius:14px;color:var(--muted);font-size:.9rem}.note strong{color:var(--txt)}.empty{display:none;text-align:center;padding:24px;color:var(--muted)}
+.modal{display:none;position:fixed;inset:0;background:#030713d9;backdrop-filter:blur(7px);z-index:5;align-items:center;justify-content:center;padding:16px}.modal.open{display:flex}.dialog{width:min(100%,900px);max-height:92vh;background:#0f1729;border:1px solid #3a496b;border-radius:17px;display:flex;flex-direction:column;overflow:hidden}.head{padding:17px 20px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:12px}.head h2{margin:0 0 4px}.head p{margin:0;color:var(--muted);font-size:.85rem}.lib{display:none;margin:12px 18px 0;padding:12px;border:1px solid #645337;background:#332b1e;border-radius:10px;color:#f5dfb4;font-size:.85rem}.lib.show{display:block}.codebox{overflow:auto;min-height:0}pre{margin:0;padding:20px;white-space:pre;overflow:auto;font: .84rem/1.55 ui-monospace,SFMono-Regular,Consolas,monospace;color:#dbe5ff}.foot{display:flex;gap:9px;align-items:center;flex-wrap:wrap;padding:13px 18px;border-top:1px solid var(--line)}.toast{margin-left:auto;color:var(--green);font-size:.85rem}@media(max-width:520px){.wrap{width:calc(100% - 22px);padding-top:26px}.card{padding:17px}pre{padding:14px;font-size:.77rem}.toast{width:100%;margin:0}}
+</style>
+</head>
+<body><main class="wrap">
+<header><div class="eyebrow">MSBTE · IoT Applications · NodeMCU</div><h1>Practical Code Index</h1><p>Your reviewed Arduino sketches, organized into cards. Double-click a card or tap <b>View code</b> to open a sketch, then copy it with one tap. Replace credential placeholders before uploading.</p></header>
+<div class="toolbar"><input id="search" class="search" type="search" placeholder="Search practicals, sensors, libraries…" aria-label="Search practicals"><span class="hint">Double-click any code card to view it.</span></div>
+<section class="grid" id="grid">
+<article class="card" tabindex="0" data-key="p2" data-title="Practical 2 LED push button"><div class="top"><span class="num">02</span><span class="status">Reviewed</span></div><h2>LED Control Using Push Button</h2><p class="desc">Reads a button and switches an LED on or off.</p><div class="tags"><span class="tag">Digital I/O</span><span class="tag">NodeMCU</span></div><div class="actions"><button class="primary view">View code</button><button class="secondary copy">Copy code</button></div></article>
+<article class="card" tabindex="0" data-key="p3" data-title="Practical 3 IR sensor relay"><div class="top"><span class="num">03</span><span class="status warn">Check relay type</span></div><h2>IR Sensor with Relay</h2><p class="desc">Switches a relay from the IR sensor's digital output; code assumes active-LOW relay.</p><div class="tags"><span class="tag">IR sensor</span><span class="tag">Relay</span></div><div class="actions"><button class="primary view">View code</button><button class="secondary copy">Copy code</button></div></article>
+<article class="card" tabindex="0" data-key="p4" data-title="Practical 4 DHT11 humidity temperature"><div class="top"><span class="num">04</span><span class="status">DHT11</span></div><h2>Temperature &amp; Humidity Sensor</h2><p class="desc">Reads DHT11 values and prints them in Serial Monitor.</p><div class="tags"><span class="tag">DHT11</span><span class="tag">Serial Monitor</span></div><div class="actions"><button class="primary view">View code</button><button class="secondary copy">Copy code</button></div></article>
+<article class="card" tabindex="0" data-key="p5" data-title="Practical 5 PIR sensor relay motion"><div class="top"><span class="num">05</span><span class="status warn">Check relay type</span></div><h2>PIR Sensor with Relay</h2><p class="desc">Turns the relay on when motion is detected; assumes active-LOW relay.</p><div class="tags"><span class="tag">PIR</span><span class="tag">Motion</span><span class="tag">Relay</span></div><div class="actions"><button class="primary view">View code</button><button class="secondary copy">Copy code</button></div></article>
+<article class="card" tabindex="0" data-key="p6" data-title="Practical 6 NodeMCU WiFi"><div class="top"><span class="num">06</span><span class="status">Reviewed</span></div><h2>Connect NodeMCU to Wi-Fi</h2><p class="desc">Connects to Wi-Fi and prints the assigned IP address.</p><div class="tags"><span class="tag">ESP8266WiFi</span><span class="tag">Wi-Fi</span></div><div class="actions"><button class="primary view">View code</button><button class="secondary copy">Copy code</button></div></article>
+<article class="card" tabindex="0" data-key="p9" data-title="Practical 9 LDR light intensity Blynk"><div class="top"><span class="num">09</span><span class="status warn">Configure Blynk</span></div><h2>Light Intensity Monitoring with Blynk</h2><p class="desc">Reads LDR on A0, controls LED on D1, and sends readings to V5.</p><div class="tags"><span class="tag">LDR</span><span class="tag">Blynk</span><span class="tag">A0 / V5</span></div><div class="actions"><button class="primary view">View code</button><button class="secondary copy">Copy code</button></div></article>
+<article class="card" tabindex="0" data-key="p10" data-title="Practical 10 smart home Blynk fan light servo"><div class="top"><span class="num">10</span><span class="status warn">Configure hardware</span></div><h2>IoT-Enabled Smart Home</h2><p class="desc">Controls a light, fan and servo door lock using Blynk V1, V2 and V3.</p><div class="tags"><span class="tag">Blynk</span><span class="tag">Servo</span><span class="tag">Automation</span></div><div class="actions"><button class="primary view">View code</button><button class="secondary copy">Copy code</button></div></article>
+<article class="card" tabindex="0" data-title="Practical 7 webserver skipped"><div class="top"><span class="num">07</span><span class="status mutedstatus">Skipped</span></div><h2>Data Transmission to Webserver</h2><p class="desc">Marked skipped in your current preparation list.</p><div class="tags"><span class="tag">HTTP</span><span class="tag">Webserver</span></div><div class="actions"><button class="secondary" disabled>Code not included</button></div></article>
+<article class="card" tabindex="0" data-title="Practical 8 MQTT skipped"><div class="top"><span class="num">08</span><span class="status mutedstatus">Skipped</span></div><h2>MQTT Protocol</h2><p class="desc">Marked skipped in your current preparation list.</p><div class="tags"><span class="tag">MQTT</span><span class="tag">Publish/subscribe</span></div><div class="actions"><button class="secondary" disabled>Code not included</button></div></article>
+</section><div class="empty" id="empty">No matching practicals found.</div>
+<div class="note"><strong>Before uploading:</strong> Code was reviewed from the sketches shared in chat, but has not all been compiled or physically tested. Check wiring, pin labels and relay polarity. Never connect a mains-powered load directly to a NodeMCU GPIO pin.</div>
+</main>
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="dialog"><div class="head"><div><h2 id="modalTitle">Practical code</h2><p id="subtitle"></p></div><button class="secondary" id="close" aria-label="Close">✕</button></div><div class="lib" id="lib"></div><div class="codebox"><pre><code id="code"></code></pre></div><div class="foot"><button class="primary" id="copyMain">Copy code to clipboard</button><button class="secondary" id="close2">Close</button><span class="toast" id="toast" aria-live="polite"></span></div></div></div>
+<script>
+const S={
+p2:{title:"Practical 2 — LED Control Using Push Button",sub:"LED on GPIO5 (D1), button on GPIO4 (D2). Use wiring that gives the input a defined HIGH/LOW state.",code:`int ledpin = 5;
+int button = 4;
+int buttonState = 0;
+
+void setup()
+{
+  pinMode(ledpin, OUTPUT);
+  pinMode(button, INPUT);
+}
+
+void loop()
+{
+  buttonState = digitalRead(button);
+
+  if (buttonState == HIGH)
+  {
+    digitalWrite(ledpin, HIGH);
+    delay(200);
+  }
+
+  if (buttonState == LOW)
+  {
+    digitalWrite(ledpin, LOW);
+    delay(200);
+  }
+}`},
+p3:{title:"Practical 3 — IR Sensor with Relay",sub:"IR on D3, relay on D4. Assumes sensor LOW indicates detection and relay is active-LOW.",code:`int IR = D3;
+int relay = D4;
+
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(IR, INPUT);
+  pinMode(relay, OUTPUT);
+  digitalWrite(relay, HIGH);  // Relay OFF (active-LOW)
+}
+
+void loop()
+{
+  int IRState = digitalRead(IR);
+  Serial.println(IRState);
+
+  if (IRState == LOW)
+  {
+    digitalWrite(relay, LOW);   // Relay ON
+  }
+  else
+  {
+    digitalWrite(relay, HIGH);  // Relay OFF
+    delay(200);
+  }
+}`},
+p4:{title:"Practical 4 — DHT11 Temperature and Humidity",sub:"DHT data pin on GPIO2 (D4), as in the shared code.",code:`#include <DHT.h>
+
+#define DHTPIN 2
+#define DHTTYPE DHT11
+
+DHT dht(DHTPIN, DHTTYPE);
+
+void setup()
+{
+  Serial.begin(9600);
+  dht.begin();
+}
+
+void loop()
+{
+  float temperature = dht.readTemperature();
+  float humidity = dht.readHumidity();
+
+  Serial.print("Temperature: ");
+  Serial.print(temperature);
+  Serial.println(" °C");
+
+  Serial.print("Humidity: ");
+  Serial.print(humidity);
+  Serial.println(" %");
+
+  delay(1000);
+}`,note:"Libraries: install “DHT sensor library” by Adafruit. Install “Adafruit Unified Sensor” too if your library version requires it. Verify that the data wire is connected to D4/GPIO2."},
+p5:{title:"Practical 5 — PIR Sensor with Relay",sub:"PIR on D3 and relay on D4. Assumes PIR output HIGH on motion and an active-LOW relay module.",code:`int relay = D4;
+int sensor = D3;
+
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(relay, OUTPUT);
+  pinMode(sensor, INPUT);
+  digitalWrite(relay, HIGH);  // Relay OFF
+}
+
+void loop()
+{
+  int state = digitalRead(sensor);
+
+  if (state == HIGH)
+  {
+    digitalWrite(relay, LOW);   // Relay ON
+    Serial.println("Motion detected - Relay ON");
+  }
+  else
+  {
+    digitalWrite(relay, HIGH);  // Relay OFF
+    Serial.println("No motion - Relay OFF");
+  }
+
+  delay(1000);
+}`},
+p6:{title:"Practical 6 — Connect NodeMCU to Wi-Fi",sub:"Replace the SSID and password placeholders with your Wi-Fi credentials.",code:`#include <ESP8266WiFi.h>
+
+const char* ssid = "YourSSID";
+const char* password = "YourPassword";
+
+void setup()
+{
+  Serial.begin(115200);
+  WiFi.begin(ssid, password);
+
+  Serial.print("Connecting to WiFi");
+
+  while (WiFi.status() != WL_CONNECTED)
+  {
+    delay(500);
+    Serial.print(".");
+  }
+
+  Serial.println();
+  Serial.println("WiFi connected!");
+  Serial.print("IP address: ");
+  Serial.println(WiFi.localIP());
+}
+
+void loop()
+{
+}`},
+p9:{title:"Practical 9 — Light Intensity Monitoring with Blynk",sub:"LDR on A0, LED on D1, reading sent to Blynk virtual pin V5.",code:`#define BLYNK_TEMPLATE_ID "YourTemplateID"
+#define BLYNK_TEMPLATE_NAME "YourTemplateName"
+#define BLYNK_AUTH_TOKEN "YourAuthToken"
+
+#define BLYNK_PRINT Serial
+
+#include <ESP8266WiFi.h>
+#include <BlynkSimpleEsp8266.h>
+
+#define led D1
+#define sensor A0
+
+char ssid[] = "YourSSID";
+char pass[] = "YourPassword";
+
+BlynkTimer timer;
+
+void sendSensor()
+{
+  int value = analogRead(sensor);
+  Serial.print("Light Intensity: ");
+  Serial.println(value);
+
+  if (value < 150)
+    digitalWrite(led, HIGH);
+  else
+    digitalWrite(led, LOW);
+
+  Blynk.virtualWrite(V5, value);
+}
+
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(led, OUTPUT);
+  digitalWrite(led, LOW);
+  Blynk.begin(BLYNK_AUTH_TOKEN, ssid, pass);
+  timer.setInterval(500L, sendSensor);
+}
+
+void loop()
+{
+  Blynk.run();
+  timer.run();
+}`,note:"Libraries: install the Blynk library and ESP8266 board package. Add your actual Template ID, Template Name, Auth Token and Wi-Fi credentials. Configure a Blynk integer datastream on virtual pin V5. The threshold 150 depends on your LDR voltage-divider circuit."},
+p10:{title:"Practical 10 — IoT-Enabled Smart Home",sub:"Blynk V1 controls light, V2 controls fan, V3 controls the servo lock. Assumes active-LOW relay modules.",code:`#define BLYNK_TEMPLATE_ID "YourTemplateID"
+#define BLYNK_TEMPLATE_NAME "YourTemplateName"
+#define BLYNK_AUTH_TOKEN "YourAuthToken"
+
+#define BLYNK_PRINT Serial
+
+#include <ESP8266WiFi.h>
+#include <BlynkSimpleEsp8266.h>
+#include <Servo.h>
+
+char ssid[] = "YourSSID";
+char pass[] = "YourPassword";
+
+#define light D0
+#define fan D1
+#define servoPin D2
+
+Servo lock;
+
+BLYNK_WRITE(V1)
+{
+  if (param.asInt() == 1)
+    digitalWrite(light, LOW);   // Light ON
+  else
+    digitalWrite(light, HIGH);  // Light OFF
+}
+
+BLYNK_WRITE(V2)
+{
+  if (param.asInt() == 1)
+    digitalWrite(fan, LOW);     // Fan ON
+  else
+    digitalWrite(fan, HIGH);    // Fan OFF
+}
+
+BLYNK_WRITE(V3)
+{
+  if (param.asInt() == 1)
+    lock.write(0);   // Unlock
+  else
+    lock.write(90);  // Lock
+}
+
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(light, OUTPUT);
+  pinMode(fan, OUTPUT);
+  digitalWrite(light, HIGH);  // Initially OFF
+  digitalWrite(fan, HIGH);    // Initially OFF
+
+  lock.attach(servoPin);
+  lock.write(90);             // Initially locked
+  Blynk.begin(BLYNK_AUTH_TOKEN, ssid, pass);
+}
+
+void loop()
+{
+  Blynk.run();
+}`,note:"Libraries: install Blynk and use the ESP8266 board package. Add a Servo library compatible with ESP8266. Configure Blynk datastreams/widgets V1, V2 and V3. Replace credentials. Confirm relay polarity and servo angles; power the servo appropriately and share ground with NodeMCU. Never drive a mains load directly from a GPIO pin."}
+};
+const modal=document.getElementById("modal"),code=document.getElementById("code"),toast=document.getElementById("toast"),lib=document.getElementById("lib");let current="";
+function openCode(k){if(!S[k])return;current=k;document.getElementById("modalTitle").textContent=S[k].title;document.getElementById("subtitle").textContent=S[k].sub;code.textContent=S[k].code;lib.textContent=S[k].note||"";lib.classList.toggle("show",!!S[k].note);toast.textContent="";modal.classList.add("open");}
+function closeModal(){modal.classList.remove("open");current="";}
+async function copyText(t){try{await navigator.clipboard.writeText(t);toast.textContent="Copied to clipboard ✓";}catch(e){const a=document.createElement("textarea");a.value=t;a.style.position="fixed";a.style.opacity="0";document.body.appendChild(a);a.select();const ok=document.execCommand("copy");a.remove();toast.textContent=ok?"Copied to clipboard ✓":"Copy failed; select and copy manually.";}}
+document.querySelectorAll(".card").forEach(c=>{c.addEventListener("dblclick",()=>openCode(c.dataset.key));c.addEventListener("keydown",e=>{if((e.key==="Enter"||e.key===" ")&&!e.target.closest("button")){e.preventDefault();openCode(c.dataset.key)}});const v=c.querySelector(".view");if(v)v.onclick=e=>{e.stopPropagation();openCode(c.dataset.key)};const cp=c.querySelector(".copy");if(cp)cp.onclick=async e=>{e.stopPropagation();await copyText(S[c.dataset.key].code);cp.textContent="Copied ✓";setTimeout(()=>cp.textContent="Copy code",1400)};});
+document.getElementById("copyMain").onclick=()=>{if(current)copyText(S[current].code)};document.getElementById("close").onclick=closeModal;document.getElementById("close2").onclick=closeModal;modal.onclick=e=>{if(e.target===modal)closeModal()};document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal()});
+document.getElementById("search").addEventListener("input",e=>{const q=e.target.value.toLowerCase().trim();let n=0;document.querySelectorAll(".card").forEach(c=>{const ok=(c.dataset.title+" "+c.innerText).toLowerCase().includes(q);c.style.display=ok?"":"none";if(ok)n++});document.getElementById("empty").style.display=n?"none":"block"});
+</script></body></html>
